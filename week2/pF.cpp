@@ -2,14 +2,14 @@
 using namespace std;
 
 int main(){
-    int a,b,ret;
-    char c;
+    int a,b,ret = 0;
+    char c1, c2;
     cin >> a >> b;
     for(int i = 0; i<a; ++i){
         for(int j = 0; j<b; ++j){
-            cin >> c;
-            if(c == '#'){
-                ret++;
+            cin >> c1 >> c2;
+            if (c1  == '#' || c2 == '#'){
+                ++ret;
             }
         }
     }
