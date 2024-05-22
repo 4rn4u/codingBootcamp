@@ -2,24 +2,29 @@
 using namespace std;
 
 int main(){
-    int ret;
-    int a[16];
-    for(int i=0;i<15;i++){
+    int ret = 0;
+    char a[16];
+    for(int i=0;i<16;i++){
         cin>>a[i];
+        a[i] -= '0';
     }
-    for(int i = 0; i<15; ++i){
+    for(int i = 0; i<16; ++i){
         if (i % 2 == 0){
             a[i] = a[i] * 2;
             if (a[i] > 9){
                 a[i] = a[i] - 9;
+                ret += a[i];
+                continue;
             }
             ret += a[i];
         }
-        ret += a[i];
+        else {
+            ret += a[i];
+        }
     }
     if (ret % 10 == 0){
-        cout<<"YES"<<endl;
+        cout<<"YES";
     }else{
-        cout<<"NO"<<endl;
+        cout<<"NO";
     }
 }

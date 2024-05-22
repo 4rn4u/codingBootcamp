@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int t1, t2, prev, n, p1, p2;
+    int t1, t2;
     cin >> t1 >> t2;
     int a[t1], b[t2];
     for(int i = 0; i<t1; ++i){
@@ -11,6 +11,7 @@ int main(){
     for(int i = 0; i<t2; ++i){
         cin >> b[i];
     }
+    int prev, p1 = 0, p2 = 0;
     while(p1 <= t1 && p2 <= t2){
         if (a[p1] == b[p2]){
             prev = a[p1];
